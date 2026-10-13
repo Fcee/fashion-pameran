@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #F7F4EE;
+    color: #141413;
+    overflow-x: hidden;
+  }
+
+  /* Custom high-fashion scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F7F4EE;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #B89563;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #967442;
+  }
+}
+
+.font-serif-fashion {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans-editorial {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+

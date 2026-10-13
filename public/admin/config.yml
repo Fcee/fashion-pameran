@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "store_config"
+    label: "Store Configuration"
+    files:
+      - file: "public/data/store_config.json"
+        label: "Store Settings"
+        name: "settings"
+        fields:
+          - { label: "Merchant ID", name: "merchant_id", widget: "string" }
+          - { label: "Nama Toko", name: "name", widget: "string" }
+          - { label: "Slogan", name: "tagline", widget: "string" }
+          - { label: "Tema Preset", name: "theme_preset", widget: "string" }
+          - { label: "Jam Operasional Buka", name: "operating_hours.open", widget: "string" }
+          - { label: "Jam Operasional Tutup", name: "operating_hours.close", widget: "string" }
+          - { label: "WhatsApp Routers", name: "whatsapp_routers", widget: "list" }
+
+  - name: "catalog"
+    label: "Katalog Busana"
+    files:
+      - file: "public/data/catalog.json"
+        label: "Daftar Produk"
+        name: "products"
+        fields:
+          - label: "Katalog Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID Produk", name: "id", widget: "string" }
+              - { label: "Judul Produk", name: "title", widget: "string" }
+              - { label: "Kategori", name: "category", widget: "string" }
+              - { label: "Harga Dasar (IDR)", name: "base_price", widget: "number" }
+              - { label: "Status Stok", name: "stock_status", widget: "select", options: ["in_stock", "low_stock", "pre_order"] }
+              - { label: "Deskripsi", name: "description", widget: "text" }
+

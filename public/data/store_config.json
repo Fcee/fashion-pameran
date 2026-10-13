@@ -1,0 +1,53 @@
+{
+  "store_config": {
+    "merchant_id": "MCHT-ATELIER-01",
+    "name": "ATELIER NOIR & CO.",
+    "tagline": "Curated Indonesian Heritage & Tailored Silhouette",
+    "theme_preset": "noir-ivory-champagne",
+    "business_type": "retail_fashion",
+    "currency": "IDR",
+    "currency_symbol": "Rp",
+    "operating_hours": {
+      "timezone": "Asia/Jakarta",
+      "open": "08:30",
+      "close": "21:30"
+    },
+    "whatsapp_routers": [
+      {
+        "name": "Concierge Gallery 1",
+        "phone": "6281234567891"
+      },
+      {
+        "name": "Concierge Gallery 2",
+        "phone": "6281234567892"
+      }
+    ],
+    "bundling_rules": [
+      {
+        "min_qty": 2,
+        "discount_percent": 10,
+        "label": "Curated Pair (Dua Busana Pilihan Diskon 10%)"
+      },
+      {
+        "min_qty": 3,
+        "discount_percent": 15,
+        "label": "Capsule Wardrobe (Tiga atau Lebih Diskon 15%)"
+      }
+    ],
+    "loyalty_config": {
+      "points_per_100k": 10,
+      "point_value_idr": 1000,
+      "member_tiers": [
+        { "name": "Classic Client", "min_points": 0 },
+        { "name": "Gold Patron", "min_points": 50 },
+        { "name": "Noir Private Member", "min_points": 150 }
+      ]
+    },
+    "atelier_location": {
+      "city": "Jakarta Selatan",
+      "province": "DKI Jakarta",
+      "country": "Indonesia"
+    }
+  }
+}
+
