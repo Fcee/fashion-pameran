@@ -88,21 +88,24 @@ export const ProductDetailModal = () => {
     : [selectedProduct.image];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-noir/70 backdrop-blur-sm overflow-y-auto">
-      <div className="relative bg-white border border-ivory-border max-w-4xl w-full my-auto md:my-8 shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[95vh]">
+    <div 
+      onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-noir/70 backdrop-blur-sm overflow-y-auto"
+    >
+      <div className="relative bg-white border border-ivory-border max-w-4xl w-full my-auto md:my-8 shadow-2xl flex flex-col md:flex-row max-h-[92vh] md:max-h-[90vh] overflow-y-auto md:overflow-hidden">
         
         {/* Close Modal Button */}
         <button
           onClick={closeModal}
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 bg-ivory text-noir hover:bg-noir hover:text-ivory p-1.5 sm:p-2 border border-ivory-border transition-colors"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 bg-white/95 md:bg-ivory text-noir hover:bg-noir hover:text-ivory p-2 border border-ivory-border shadow-sm transition-colors rounded-full md:rounded-none"
           aria-label="Tutup modal"
         >
           <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
         {/* Left Column: Image Gallery */}
-        <div className="md:w-1/2 p-4 sm:p-6 bg-ivory flex flex-col">
-          <div className="relative aspect-[3/4] overflow-hidden bg-white border border-ivory-border mb-4">
+        <div className="w-full md:w-1/2 p-3 sm:p-5 md:p-6 bg-ivory flex flex-col flex-shrink-0">
+          <div className="relative aspect-[4/3] sm:aspect-[16/10] md:aspect-[3/4] max-h-56 sm:max-h-72 md:max-h-none overflow-hidden bg-white border border-ivory-border mb-3 md:mb-4">
             <img
               src={activeImage}
               alt={selectedProduct.title}
@@ -117,7 +120,7 @@ export const ProductDetailModal = () => {
                 <button
                   key={idx}
                   onClick={() => setActiveImage(img)}
-                  className={`w-16 h-20 border overflow-hidden flex-shrink-0 transition-all ${
+                  className={`w-12 h-14 sm:w-14 sm:h-16 md:w-16 md:h-20 border overflow-hidden flex-shrink-0 transition-all ${
                     activeImage === img ? 'border-champagne ring-1 ring-champagne' : 'border-ivory-border opacity-70 hover:opacity-100'
                   }`}
                 >
@@ -129,10 +132,10 @@ export const ProductDetailModal = () => {
         </div>
 
         {/* Right Column: Product Specs & Variant Matrix */}
-        <div className="md:w-1/2 p-4 sm:p-6 md:p-8 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
-          <div>
+        <div className="w-full md:w-1/2 p-4 sm:p-6 md:p-8 flex flex-col justify-between md:overflow-y-auto md:max-h-[90vh]">
+          <div className="space-y-4 md:space-y-5 pb-6 md:pb-0">
             {/* Category & Rating */}
-            <div className="flex items-center justify-between text-xs text-noir-muted uppercase tracking-widest mb-2">
+            <div className="flex items-center justify-between text-xs text-noir-muted uppercase tracking-widest">
               <span>{selectedProduct.category}</span>
               <div className="flex items-center gap-1 text-champagne-dark font-medium">
                 <Star className="w-3.5 h-3.5 fill-champagne-dark text-champagne-dark" />
@@ -142,28 +145,28 @@ export const ProductDetailModal = () => {
             </div>
 
             {/* Title */}
-            <h2 className="font-serif-fashion text-2xl md:text-3xl text-noir font-medium leading-tight mb-2">
+            <h2 className="font-serif-fashion text-xl sm:text-2xl md:text-3xl text-noir font-medium leading-tight">
               {selectedProduct.title}
             </h2>
 
             {/* Subtitle / Edition */}
             {selectedProduct.subtitle && (
-              <p className="text-xs text-champagne-dark font-medium uppercase tracking-wider mb-4">
+              <p className="text-xs text-champagne-dark font-medium uppercase tracking-wider">
                 {selectedProduct.subtitle}
               </p>
             )}
 
             {/* Live Price */}
-            <div className="mb-6 pb-4 border-b border-ivory-border">
-              <span className="text-xs uppercase tracking-wider text-noir-muted block">
+            <div className="pb-3 md:pb-4 border-b border-ivory-border">
+              <span className="text-[11px] uppercase tracking-wider text-noir-muted block mb-1">
                 Investasi Nilai Busana
               </span>
-              <div className="flex items-baseline gap-3">
-                <span className="font-sans-editorial text-2xl font-bold text-noir">
+              <div className="flex flex-wrap items-baseline gap-2 sm:gap-3">
+                <span className="font-sans-editorial text-xl sm:text-2xl font-bold text-noir">
                   {formatIDR(unitPrice)}
                 </span>
                 {selectedProduct.stock_status === 'in_stock' && (
-                  <span className="text-xs text-emerald-700 bg-emerald-50 px-2 py-0.5 border border-emerald-200">
+                  <span className="text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 border border-emerald-200">
                     Sisa {selectedProduct.stock_count} potong siap kirim
                   </span>
                 )}
@@ -171,12 +174,12 @@ export const ProductDetailModal = () => {
             </div>
 
             {/* Description */}
-            <p className="text-xs text-noir-muted leading-relaxed mb-6 font-sans-editorial">
+            <p className="text-xs text-noir-muted leading-relaxed font-sans-editorial">
               {selectedProduct.description}
             </p>
 
             {/* Material & Care Details */}
-            <div className="bg-ivory-subtle p-3.5 border border-ivory-border text-xs mb-6 space-y-2">
+            <div className="bg-ivory-subtle p-3 sm:p-3.5 border border-ivory-border text-xs space-y-2">
               <div>
                 <strong className="text-noir font-semibold uppercase tracking-wider text-[11px] block">
                   {t.product.composition}:
@@ -193,8 +196,8 @@ export const ProductDetailModal = () => {
 
             {/* Complex Variant Matrix (PRD 4.2) */}
             {selectedProduct.variants?.map((group) => (
-              <div key={group.name} className="mb-5">
-                <div className="flex items-center justify-between mb-2">
+              <div key={group.name} className="space-y-1.5">
+                <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-noir">
                     {group.group}:
                   </span>
@@ -209,14 +212,14 @@ export const ProductDetailModal = () => {
                   )}
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {group.options.map((opt) => {
                     const isSelected = selectedVariants[group.name] === opt.name;
                     return (
                       <button
                         key={opt.name}
                         onClick={() => handleVariantChange(group.name, opt.name)}
-                        className={`text-xs px-3 py-2 border transition-all text-left ${
+                        className={`text-xs px-2.5 py-1.5 sm:px-3 sm:py-2 border transition-all text-left ${
                           isSelected
                             ? 'bg-noir text-ivory border-noir shadow-sm'
                             : 'bg-white text-noir border-ivory-border hover:border-champagne'
@@ -236,23 +239,23 @@ export const ProductDetailModal = () => {
             ))}
 
             {/* Quantity Selector */}
-            <div className="mb-6 flex items-center gap-4">
+            <div className="flex items-center gap-3 sm:gap-4 pt-1">
               <span className="text-xs font-semibold uppercase tracking-wider text-noir">
                 Kuantitas:
               </span>
               <div className="flex items-center border border-ivory-border bg-white">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-3 py-1.5 text-sm hover:bg-ivory transition-colors text-noir"
+                  className="px-2.5 py-1 text-sm hover:bg-ivory transition-colors text-noir"
                 >
                   -
                 </button>
-                <span className="px-4 py-1.5 text-xs font-semibold text-noir font-mono">
+                <span className="px-3 py-1 text-xs font-semibold text-noir font-mono">
                   {quantity}
                 </span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="px-3 py-1.5 text-sm hover:bg-ivory transition-colors text-noir"
+                  className="px-2.5 py-1 text-sm hover:bg-ivory transition-colors text-noir"
                 >
                   +
                 </button>
@@ -264,35 +267,37 @@ export const ProductDetailModal = () => {
           </div>
 
           {/* Action Buttons (Sticky at bottom on mobile) */}
-          <div className="sticky bottom-0 bg-white/95 backdrop-blur-md pt-3 pb-1 border-t border-ivory-border space-y-2 z-10">
-            <button
-              onClick={handleAddToCart}
-              className={`w-full py-3.5 px-4 text-xs font-semibold uppercase tracking-widest transition-all flex items-center justify-center gap-2 border ${
-                isAddedSuccess
-                  ? 'bg-emerald-700 text-white border-emerald-700'
-                  : 'bg-noir text-ivory hover:bg-noir-light border-noir'
-              }`}
-            >
-              {isAddedSuccess ? (
-                <>
-                  <Check className="w-4 h-4" />
-                  <span>Berhasil Ditambahkan ke Tas</span>
-                </>
-              ) : (
-                <>
-                  <ShoppingBag className="w-4 h-4" />
-                  <span>{t.product.addToCart}</span>
-                </>
-              )}
-            </button>
+          <div className="sticky bottom-0 bg-white/95 backdrop-blur-md pt-3 pb-2 md:pt-4 md:pb-1 border-t border-ivory-border -mx-4 -mb-4 px-4 sm:-mx-6 sm:-mb-6 sm:px-6 md:mx-0 md:mb-0 md:px-0 z-20 mt-4 md:mt-6 shadow-[0_-4px_12px_rgba(20,20,19,0.05)] md:shadow-none">
+            <div className="grid grid-cols-2 gap-2 md:flex md:flex-col md:space-y-2">
+              <button
+                onClick={handleAddToCart}
+                className={`w-full py-3 md:py-3.5 px-3 md:px-4 text-[11px] md:text-xs font-semibold uppercase tracking-wider md:tracking-widest transition-all flex items-center justify-center gap-1.5 md:gap-2 border ${
+                  isAddedSuccess
+                    ? 'bg-emerald-700 text-white border-emerald-700'
+                    : 'bg-noir text-ivory hover:bg-noir-light border-noir'
+                }`}
+              >
+                {isAddedSuccess ? (
+                  <>
+                    <Check className="w-4 h-4 flex-shrink-0" />
+                    <span className="truncate">Ditambahkan</span>
+                  </>
+                ) : (
+                  <>
+                    <ShoppingBag className="w-4 h-4 flex-shrink-0" />
+                    <span className="truncate">{t.product.addToCart}</span>
+                  </>
+                )}
+              </button>
 
-            <button
-              onClick={handleDirectWhatsApp}
-              className="w-full py-3.5 px-4 text-xs font-semibold uppercase tracking-widest bg-champagne text-noir hover:bg-champagne-light transition-all flex items-center justify-center gap-2 border border-champagne"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>{t.product.buyNowWhatsapp}</span>
-            </button>
+              <button
+                onClick={handleDirectWhatsApp}
+                className="w-full py-3 md:py-3.5 px-3 md:px-4 text-[11px] md:text-xs font-semibold uppercase tracking-wider md:tracking-widest bg-champagne text-noir hover:bg-champagne-light transition-all flex items-center justify-center gap-1.5 md:gap-2 border border-champagne"
+              >
+                <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                <span className="truncate">Order via WA</span>
+              </button>
+            </div>
           </div>
 
         </div>
