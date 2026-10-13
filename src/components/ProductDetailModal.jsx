@@ -88,20 +88,20 @@ export const ProductDetailModal = () => {
     : [selectedProduct.image];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-noir/70 backdrop-blur-sm overflow-y-auto">
-      <div className="relative bg-white border border-ivory-border max-w-4xl w-full my-8 shadow-2xl overflow-hidden flex flex-col md:flex-row">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-noir/70 backdrop-blur-sm overflow-y-auto">
+      <div className="relative bg-white border border-ivory-border max-w-4xl w-full my-auto md:my-8 shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[95vh]">
         
         {/* Close Modal Button */}
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 z-20 bg-ivory text-noir hover:bg-noir hover:text-ivory p-2 border border-ivory-border transition-colors"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 bg-ivory text-noir hover:bg-noir hover:text-ivory p-1.5 sm:p-2 border border-ivory-border transition-colors"
           aria-label="Tutup modal"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
         {/* Left Column: Image Gallery */}
-        <div className="md:w-1/2 p-6 bg-ivory flex flex-col">
+        <div className="md:w-1/2 p-4 sm:p-6 bg-ivory flex flex-col">
           <div className="relative aspect-[3/4] overflow-hidden bg-white border border-ivory-border mb-4">
             <img
               src={activeImage}
@@ -129,7 +129,7 @@ export const ProductDetailModal = () => {
         </div>
 
         {/* Right Column: Product Specs & Variant Matrix */}
-        <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
+        <div className="md:w-1/2 p-4 sm:p-6 md:p-8 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
           <div>
             {/* Category & Rating */}
             <div className="flex items-center justify-between text-xs text-noir-muted uppercase tracking-widest mb-2">
@@ -263,8 +263,8 @@ export const ProductDetailModal = () => {
             </div>
           </div>
 
-          {/* Action Buttons */}
-          <div className="pt-4 border-t border-ivory-border space-y-2.5">
+          {/* Action Buttons (Sticky at bottom on mobile) */}
+          <div className="sticky bottom-0 bg-white/95 backdrop-blur-md pt-3 pb-1 border-t border-ivory-border space-y-2 z-10">
             <button
               onClick={handleAddToCart}
               className={`w-full py-3.5 px-4 text-xs font-semibold uppercase tracking-widest transition-all flex items-center justify-center gap-2 border ${

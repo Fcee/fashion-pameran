@@ -7,19 +7,19 @@ export const Hero = () => {
 
   return (
     <section className="relative bg-ivory border-b border-ivory-border overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-20 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Editorial Statement */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <span className="w-8 h-[1px] bg-champagne" />
-              <span className="text-xs uppercase tracking-ultra font-semibold text-champagne-dark">
+              <span className="text-[10px] sm:text-xs uppercase tracking-ultra font-semibold text-champagne-dark">
                 {t.hero.season}
               </span>
             </div>
 
-            <h1 className="font-serif-fashion text-4xl sm:text-5xl lg:text-6xl text-noir font-normal leading-[1.15] tracking-tight mb-6">
+            <h1 className="font-serif-fashion text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-noir font-normal leading-[1.18] tracking-tight mb-4 sm:mb-6">
               {t.hero.headline}
             </h1>
 
@@ -47,18 +47,18 @@ export const Hero = () => {
             </div>
 
             {/* Micro stats / Trust badges */}
-            <div className="grid grid-cols-3 gap-6 pt-10 mt-10 border-t border-ivory-border">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 pt-6 sm:pt-10 mt-6 sm:mt-10 border-t border-ivory-border">
               <div>
-                <span className="block font-serif-fashion text-2xl text-noir font-semibold">100%</span>
-                <span className="block font-sans-editorial text-[11px] text-noir-muted uppercase tracking-wider mt-1">Tenun Tangan Asli</span>
+                <span className="block font-serif-fashion text-lg sm:text-2xl text-noir font-semibold">100%</span>
+                <span className="block font-sans-editorial text-[9px] sm:text-[11px] text-noir-muted uppercase tracking-wider mt-1">Tenun Tangan Asli</span>
               </div>
               <div>
-                <span className="block font-serif-fashion text-2xl text-noir font-semibold">Zero Fee</span>
-                <span className="block font-sans-editorial text-[11px] text-noir-muted uppercase tracking-wider mt-1">Direct WhatsApp WA</span>
+                <span className="block font-serif-fashion text-lg sm:text-2xl text-noir font-semibold">Zero Fee</span>
+                <span className="block font-sans-editorial text-[9px] sm:text-[11px] text-noir-muted uppercase tracking-wider mt-1">Direct WA</span>
               </div>
               <div>
-                <span className="block font-serif-fashion text-2xl text-noir font-semibold">Jamstack</span>
-                <span className="block font-sans-editorial text-[11px] text-noir-muted uppercase tracking-wider mt-1">PWA Offline Ready</span>
+                <span className="block font-serif-fashion text-lg sm:text-2xl text-noir font-semibold">Jamstack</span>
+                <span className="block font-sans-editorial text-[9px] sm:text-[11px] text-noir-muted uppercase tracking-wider mt-1">Offline PWA</span>
               </div>
             </div>
           </div>

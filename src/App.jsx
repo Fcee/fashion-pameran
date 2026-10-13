@@ -12,6 +12,7 @@ import { SizeGuideModal } from './components/SizeGuideModal';
 import { LoyaltyModal } from './components/LoyaltyModal';
 import { Footer } from './components/Footer';
 import { AdminDashboard } from './components/admin/AdminDashboard';
+import { MobileBottomNav } from './components/MobileBottomNav';
 
 export const App = () => {
   const { loading, t } = useStore();
@@ -59,7 +60,7 @@ export const App = () => {
 
   // Render Public Catalog Storefront
   return (
-    <div className="min-h-screen flex flex-col bg-ivory text-noir font-sans-editorial">
+    <div className="min-h-screen flex flex-col bg-ivory text-noir font-sans-editorial pb-20 md:pb-0">
       {/* Top Header */}
       <Header onOpenAdmin={openAdmin} />
 
@@ -75,12 +76,12 @@ export const App = () => {
         <LookbookShowcase />
 
         {/* Main Catalog Section */}
-        <section id="katalog" className="py-16 max-w-7xl mx-auto px-4 md:px-8">
-          <div className="mb-10 text-center max-w-2xl mx-auto">
-            <span className="text-[11px] font-semibold tracking-ultra uppercase text-champagne-dark block mb-2">
+        <section id="katalog" className="py-10 md:py-16 max-w-7xl mx-auto px-4 md:px-8">
+          <div className="mb-6 md:mb-10 text-center max-w-2xl mx-auto">
+            <span className="text-[10px] md:text-[11px] font-semibold tracking-ultra uppercase text-champagne-dark block mb-1 md:mb-2">
               Koleksi Eksklusif
             </span>
-            <h2 className="font-serif-fashion text-3xl md:text-4xl text-noir font-normal mb-3">
+            <h2 className="font-serif-fashion text-2xl md:text-4xl text-noir font-normal mb-2 md:mb-3">
               Katalog Busana Terpilih
             </h2>
             <p className="text-xs text-noir-muted leading-relaxed font-sans-editorial">
@@ -104,6 +105,9 @@ export const App = () => {
 
       {/* Footer */}
       <Footer onOpenAdmin={openAdmin} />
+
+      {/* Mobile Bottom Navigation Bar (Hidden on Desktop) */}
+      <MobileBottomNav onOpenAdmin={openAdmin} />
     </div>
   );
 };

@@ -40,7 +40,7 @@ export const CatalogFilter = () => {
   const isFiltered = selectedCategory !== 'all' || selectedSize !== 'all' || inStockOnly || sortBy !== 'latest' || searchQuery !== '';
 
   return (
-    <div className="bg-white border border-ivory-border p-4 md:p-6 mb-8">
+    <div className="bg-white border border-ivory-border p-3.5 sm:p-4 md:p-6 mb-6 md:mb-8">
       {/* Category Tabs */}
       <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 border-b border-ivory-border no-scrollbar">
         {categories.map((cat) => {

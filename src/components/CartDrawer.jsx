@@ -93,11 +93,11 @@ export const CartDrawer = () => {
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden bg-noir/70 backdrop-blur-sm">
-      <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-white border-l border-ivory-border shadow-2xl flex flex-col justify-between">
+      <div className="absolute inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+        <div className="w-screen max-w-full sm:max-w-md bg-white border-l border-ivory-border shadow-2xl flex flex-col justify-between">
           
           {/* Header */}
-          <div className="p-6 border-b border-ivory-border bg-ivory flex items-center justify-between">
+          <div className="p-4 sm:p-6 border-b border-ivory-border bg-ivory flex items-center justify-between">
             <div>
               <span className="text-[10px] uppercase tracking-ultra font-semibold text-champagne-dark block">
                 Atelier Concierge
@@ -116,7 +116,7 @@ export const CartDrawer = () => {
           </div>
 
           {/* Body Content */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-6">
+          <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
             
             {/* Dynamic Wholesale / Bundling Progress Bar (PRD 4.2) */}
             {cart.length > 0 && (
@@ -320,7 +320,7 @@ export const CartDrawer = () => {
 
           {/* Footer & Checkout Total */}
           {cart.length > 0 && (
-            <div className="p-6 border-t border-ivory-border bg-ivory space-y-3 text-xs">
+            <div className="p-4 sm:p-6 border-t border-ivory-border bg-ivory space-y-3 text-xs">
               <div className="flex justify-between text-noir-muted">
                 <span>{t.cart.subtotal}</span>
                 <span>{formatIDR(bundlingCalculation.subtotal)}</span>

@@ -82,7 +82,7 @@ export const Header = ({ onOpenAdmin }) => {
           {/* Brand Identity */}
           <div className="flex flex-col">
             <a href="#" className="group">
-              <span className="font-serif-fashion text-2xl md:text-3xl font-semibold tracking-wider text-noir block group-hover:text-champagne-dark transition-colors">
+              <span className="font-serif-fashion text-xl sm:text-2xl md:text-3xl font-semibold tracking-wider text-noir block group-hover:text-champagne-dark transition-colors">
                 ATELIER NOIR &amp; CO.
               </span>
               <span className="font-sans-editorial text-[9px] md:text-[10px] tracking-[0.25em] text-noir-muted uppercase block">

@@ -10,16 +10,16 @@ export const LookbookShowcase = () => {
   if (!lookbookItems.length) return null;
 
   return (
-    <section id="lookbook" className="py-16 bg-ivory-subtle border-b border-ivory-border">
+    <section id="lookbook" className="py-10 md:py-16 bg-ivory-subtle border-b border-ivory-border">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-ivory-border gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 md:mb-10 pb-4 md:pb-6 border-b border-ivory-border gap-3 md:gap-4">
           <div>
-            <span className="text-[11px] font-semibold tracking-ultra uppercase text-champagne-dark block mb-2">
+            <span className="text-[10px] md:text-[11px] font-semibold tracking-ultra uppercase text-champagne-dark block mb-1 md:mb-2">
               Sartorial Archive
             </span>
-            <h2 className="font-serif-fashion text-3xl md:text-4xl text-noir font-normal">
+            <h2 className="font-serif-fashion text-2xl md:text-4xl text-noir font-normal">
               Editorial Lookbook &amp; Siluet
             </h2>
           </div>
@@ -28,8 +28,8 @@ export const LookbookShowcase = () => {
           </p>
         </div>
 
-        {/* Lookbook Horizontal Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Lookbook Responsive Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {lookbookItems.slice(0, 4).map((item, idx) => (
             <div
               key={item.id}

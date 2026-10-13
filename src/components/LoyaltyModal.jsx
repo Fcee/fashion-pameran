@@ -40,8 +40,8 @@ export const LoyaltyModal = () => {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-noir/70 backdrop-blur-sm overflow-y-auto">
-      <div className="relative bg-white border border-ivory-border max-w-xl w-full p-6 md:p-8 shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-noir/70 backdrop-blur-sm overflow-y-auto">
+      <div className="relative bg-white border border-ivory-border max-w-xl w-full p-4 sm:p-6 md:p-8 shadow-2xl max-h-[92vh] overflow-y-auto my-auto">
         
         {/* Close Button */}
         <button
