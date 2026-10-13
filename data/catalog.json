@@ -1,0 +1,352 @@
+{
+  "catalog": [
+    {
+      "id": "ATLR-JKT-01",
+      "type": "physical",
+      "title": "Tenun Troso Structured Blazer Noir",
+      "subtitle": "Koleksi Heritage Noir Edition 2026",
+      "category": "Outerwear & Jas",
+      "base_price": 1250000,
+      "stock_status": "in_stock",
+      "stock_count": 8,
+      "rating": 4.9,
+      "reviews_count": 42,
+      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1000&auto=format&fit=crop"
+      ],
+      "description": "Blazer terstruktur dengan aksen tenun ikat ATBM Troso Jepara. Menggabungkan ketegasan siluet tailoring modern dengan kehangatan tenun tangan artisanal Indonesia. Full furing katun cupro dingin dan kancing tanduk alami.",
+      "composition": "60% Wol Halus 120s, 40% Benang Sutera Tenun Tangan Jepara. Furing Bemberg Cupro.",
+      "care_instructions": "Dry clean only. Setrika suhu sedang dengan kain pelapis.",
+      "is_featured": true,
+      "is_lookbook": true,
+      "variants": [
+        {
+          "group": "Ukuran",
+          "name": "size",
+          "options": [
+            { "name": "S (Chest 98cm, Length 72cm)", "code": "S", "price_add": 0 },
+            { "name": "M (Chest 104cm, Length 74cm)", "code": "M", "price_add": 0 },
+            { "name": "L (Chest 110cm, Length 76cm)", "code": "L", "price_add": 0 },
+            { "name": "XL (Chest 116cm, Length 78cm)", "code": "XL", "price_add": 50000 }
+          ]
+        },
+        {
+          "group": "Warna Lapisan",
+          "name": "lining_color",
+          "options": [
+            { "name": "Noir Obsidian", "color_hex": "#141413", "price_add": 0 },
+            { "name": "Champagne Raw Silk", "color_hex": "#B89563", "price_add": 75000 }
+          ]
+        },
+        {
+          "group": "Layanan Personalisasi",
+          "name": "custom_service",
+          "options": [
+            { "name": "Standar Siap Pakai", "price_add": 0 },
+            { "name": "Bordir Inisial Nama (Monogram Emas)", "price_add": 85000 },
+            { "name": "Kotak Kayu Koleksi & Sertifikat Keaslian", "price_add": 120000 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ATLR-SHR-02",
+      "type": "physical",
+      "title": "Kemeja Sutera ATBM Motif Parang Kontemporer",
+      "subtitle": "Karya Maestro Batik Pekalongan",
+      "category": "Kemeja & Atasan",
+      "base_price": 890000,
+      "stock_status": "in_stock",
+      "stock_count": 12,
+      "rating": 5.0,
+      "reviews_count": 38,
+      "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1620012253295-c15c429f6041?q=80&w=1000&auto=format&fit=crop"
+      ],
+      "description": "Kemeja siluet santai dengan potongan kerah Cuban. Ditenun dari serat sutera alam menggunakan alat tenun bukan mesin, kemudian dibatik cap malam dingin dengan pewarna alam ekstrak mahoni.",
+      "composition": "100% Sutera ATBM Organik. Pewarnaan ramah lingkungan ekstrak kayu tingi dan mahoni.",
+      "care_instructions": "Cuci manual dengan sabun lerak atau sampo lembut. Jangan diperas keras.",
+      "is_featured": true,
+      "is_lookbook": true,
+      "variants": [
+        {
+          "group": "Ukuran",
+          "name": "size",
+          "options": [
+            { "name": "S (Dada 100cm)", "code": "S", "price_add": 0 },
+            { "name": "M (Dada 106cm)", "code": "M", "price_add": 0 },
+            { "name": "L (Dada 112cm)", "code": "L", "price_add": 0 },
+            { "name": "XL (Dada 118cm)", "code": "XL", "price_add": 40000 }
+          ]
+        },
+        {
+          "group": "Pilihan Kerah",
+          "name": "collar",
+          "options": [
+            { "name": "Cuban Camp Collar (Relaxed)", "price_add": 0 },
+            { "name": "Band / Mandarin Collar (Formal Minimal)", "price_add": 30000 }
+          ]
+        },
+        {
+          "group": "Kemasan Eksklusif",
+          "name": "packaging",
+          "options": [
+            { "name": "Dustbag Kanvas Organik", "price_add": 0 },
+            { "name": "Gift Box Atelier Noir Pita Satin", "price_add": 65000 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ATLR-TRS-03",
+      "type": "physical",
+      "title": "Double-Pleat Tailored Trousers in Ecru Linen",
+      "subtitle": "Belgian Heavyweight Linen Blend",
+      "category": "Bawahan & Celana",
+      "base_price": 750000,
+      "stock_status": "in_stock",
+      "stock_count": 15,
+      "rating": 4.8,
+      "reviews_count": 29,
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?q=80&w=1000&auto=format&fit=crop"
+      ],
+      "description": "Celana berpotongan rileks dengan lipit ganda (double pleat) khas gaya sartorial Eropa. Memiliki pengatur pinggang samping berbahan kuningan (side adjusters) tanpa memerlukan sabuk.",
+      "composition": "70% Linen Belgia Berat 320GSM, 30% Katun Pima Bersertifikat Oeko-Tex.",
+      "care_instructions": "Cuci mesin siklus lembut 30 derajat Celsius atau dry clean.",
+      "is_featured": true,
+      "is_lookbook": false,
+      "variants": [
+        {
+          "group": "Ukuran Pinggang",
+          "name": "size",
+          "options": [
+            { "name": "28 - 29 (Waist 76cm)", "code": "28", "price_add": 0 },
+            { "name": "30 - 31 (Waist 81cm)", "code": "30", "price_add": 0 },
+            { "name": "32 - 33 (Waist 86cm)", "code": "32", "price_add": 0 },
+            { "name": "34 - 35 (Waist 92cm)", "code": "34", "price_add": 35000 }
+          ]
+        },
+        {
+          "group": "Panjang Keliman",
+          "name": "hem",
+          "options": [
+            { "name": "Standar Cuffed 4cm", "price_add": 0 },
+            { "name": "Raw Clean Hem (Dipotong Rata)", "price_add": 0 },
+            { "name": "Bespoke Hem Length (+ Penyesuaian Panjang)", "price_add": 45000 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ATLR-DRS-04",
+      "type": "physical",
+      "title": "Midi Wrap Dress Sutera Organza Ethereal",
+      "subtitle": "Siluet Feminin Arsitektural",
+      "category": "Gaun & Setelan",
+      "base_price": 1450000,
+      "stock_status": "low_stock",
+      "stock_count": 3,
+      "rating": 5.0,
+      "reviews_count": 21,
+      "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1000&auto=format&fit=crop"
+      ],
+      "description": "Gaun lilit berdaya pikat anggun dengan siluet asimetris. Dibalut kain sutera organza berlapis furing katun sejuk. Sentuhan drapery mengalir menonjolkan keanggunan postur tubuh tanpa kesan berlebihan.",
+      "composition": "Lapisan Luar: 100% Sutera Organza Alami. Lapisan Dalam: Katun Pima 100%.",
+      "care_instructions": "Dry clean profesional saja.",
+      "is_featured": true,
+      "is_lookbook": true,
+      "variants": [
+        {
+          "group": "Ukuran",
+          "name": "size",
+          "options": [
+            { "name": "XS (Bust 84cm, Length 118cm)", "code": "XS", "price_add": 0 },
+            { "name": "S (Bust 88cm, Length 120cm)", "code": "S", "price_add": 0 },
+            { "name": "M (Bust 94cm, Length 122cm)", "code": "M", "price_add": 0 },
+            { "name": "L (Bust 100cm, Length 124cm)", "code": "L", "price_add": 60000 }
+          ]
+        },
+        {
+          "group": "Warna Pilihan",
+          "name": "color",
+          "options": [
+            { "name": "Alabaster Ivory", "color_hex": "#F7F4EE", "price_add": 0 },
+            { "name": "Smoked Noir", "color_hex": "#141413", "price_add": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ATLR-KMN-05",
+      "type": "physical",
+      "title": "Haori Overcoat Katun Tenun Baduy Minimal",
+      "subtitle": "Eksplorasi Tenun Geometris Tradisional",
+      "category": "Outerwear & Jas",
+      "base_price": 980000,
+      "stock_status": "in_stock",
+      "stock_count": 9,
+      "rating": 4.9,
+      "reviews_count": 34,
+      "image": "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop"
+      ],
+      "description": "Outer berpotongan Haori Jepang kontemporer yang dibuat langsung dari lembaran tenun benang pilin kapas masyarakat adat Baduy Luar. Tekstur tegas namun sangat nyaman bernapas di iklim tropis.",
+      "composition": "100% Benang Katun Kapas Alami Non-Kimiawi.",
+      "care_instructions": "Cuci tangan dengan air dingin. Keringkan di tempat teduh.",
+      "is_featured": false,
+      "is_lookbook": true,
+      "variants": [
+        {
+          "group": "Ukuran",
+          "name": "size",
+          "options": [
+            { "name": "Reguler Fit (Panjang 80cm, Dada Lebar)", "code": "REG", "price_add": 0 },
+            { "name": "Over-length Fit (Panjang 95cm)", "code": "OVR", "price_add": 50000 }
+          ]
+        },
+        {
+          "group": "Aksen Kancing",
+          "name": "buttons",
+          "options": [
+            { "name": "Kancing Tempurung Kelapa Halus", "price_add": 0 },
+            { "name": "Kancing Kuningan Cor Handcrafted", "price_add": 45000 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ATLR-SET-06",
+      "type": "physical",
+      "title": "Two-Piece Relaxed Atelier Suit in Sand Wool",
+      "subtitle": "Setelan Lengkap Jas Unstructured & Trousers",
+      "category": "Gaun & Setelan",
+      "base_price": 1980000,
+      "stock_status": "pre_order",
+      "stock_count": 5,
+      "rating": 5.0,
+      "reviews_count": 18,
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+      ],
+      "description": "Setelan dua potong bernuansa santai namun prestisius. Dibuat dengan konstruksi jas tanpa bantalan bahu kaku (unstructured soft shoulder), memberikan kenyamanan gerak dinamis seharian.",
+      "composition": "85% Wol Tropis Lembut, 15% Serat Bambu Ramah Lingkungan.",
+      "care_instructions": "Dry clean disarankan. Uapkan (steam) untuk merapikan kerutan alami.",
+      "is_featured": true,
+      "is_lookbook": true,
+      "variants": [
+        {
+          "group": "Ukuran Jas & Celana",
+          "name": "size",
+          "options": [
+            { "name": "Size 46 (Small Slim)", "code": "46", "price_add": 0 },
+            { "name": "Size 48 (Medium Fit)", "code": "48", "price_add": 0 },
+            { "name": "Size 50 (Large Relaxed)", "code": "50", "price_add": 0 },
+            { "name": "Size 52 (Extra Large)", "code": "52", "price_add": 100000 }
+          ]
+        },
+        {
+          "group": "Layanan Konsultasi Ukuran",
+          "name": "tailor_consultation",
+          "options": [
+            { "name": "Ukuran Standar Sesuai Bagan", "price_add": 0 },
+            { "name": "Sesi Panggilan Video Pengukuran Pribadi (Virtual Fitting)", "price_add": 150000 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ATLR-SHR-07",
+      "type": "physical",
+      "title": "Kemeja Kerah Tegak Katun Oxford Tenun Lurik",
+      "subtitle": "Kombinasi Garis Halus Yogyakarta",
+      "category": "Kemeja & Atasan",
+      "base_price": 680000,
+      "stock_status": "in_stock",
+      "stock_count": 20,
+      "rating": 4.8,
+      "reviews_count": 55,
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+      ],
+      "description": "Kemeja lengan panjang bersiluet rapi dengan sentuhan motif lurik klasik khas Jawa Tengah. Menggunakan katun tenun 60s yang sangat lembut di kulit dan tahan kerut alami.",
+      "composition": "100% Katun Sisir Benang 60s Tenun Tradisional Pedan.",
+      "care_instructions": "Cuci dengan warna serupa pada suhu maksimal 40C.",
+      "is_featured": false,
+      "is_lookbook": false,
+      "variants": [
+        {
+          "group": "Ukuran",
+          "name": "size",
+          "options": [
+            { "name": "S (Slim Fit)", "code": "S", "price_add": 0 },
+            { "name": "M (Classic Fit)", "code": "M", "price_add": 0 },
+            { "name": "L (Classic Fit)", "code": "L", "price_add": 0 },
+            { "name": "XL (Relaxed Fit)", "code": "XL", "price_add": 30000 }
+          ]
+        },
+        {
+          "group": "Warna Dominan",
+          "name": "color",
+          "options": [
+            { "name": "Lurik Noir & Putih Tulang", "color_hex": "#141413", "price_add": 0 },
+            { "name": "Lurik Pasir Emas & Kopi", "color_hex": "#B89563", "price_add": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ATLR-TRS-08",
+      "type": "physical",
+      "title": "Wide Leg Trousers Serat Rami Ramie Eco-Weave",
+      "subtitle": "Konstruksi Arsitektural Jatuh Bebas",
+      "category": "Bawahan & Celana",
+      "base_price": 820000,
+      "stock_status": "in_stock",
+      "stock_count": 11,
+      "rating": 4.9,
+      "reviews_count": 19,
+      "image": "https://images.unsplash.com/photo-1551803091-e20673f15770?q=80&w=1000&auto=format&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1551803091-e20673f15770?q=80&w=1000&auto=format&fit=crop"
+      ],
+      "description": "Celana berpipa lebar dramatis yang memberikan gerak dinamis dan nafas editorial. Terbuat dari serat rami (ramie) alami Indonesia yang kokoh dan bertekstur mewah.",
+      "composition": "80% Serat Rami Nabati, 20% Katun Organik.",
+      "care_instructions": "Cuci terpisah dengan deterjen lembut tanpa pemutih.",
+      "is_featured": false,
+      "is_lookbook": true,
+      "variants": [
+        {
+          "group": "Ukuran",
+          "name": "size",
+          "options": [
+            { "name": "Size 1 (Fit S/M)", "code": "1", "price_add": 0 },
+            { "name": "Size 2 (Fit L/XL)", "code": "2", "price_add": 0 }
+          ]
+        },
+        {
+          "group": "Warna",
+          "name": "color",
+          "options": [
+            { "name": "Deep Noir", "color_hex": "#141413", "price_add": 0 },
+            { "name": "Natural Ecru", "color_hex": "#F7F4EE", "price_add": 0 }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
