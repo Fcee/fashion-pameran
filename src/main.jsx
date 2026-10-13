@@ -8,8 +8,10 @@ import './index.css';
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
     const swUrl = `${import.meta.env.BASE_URL}sw.js`;
-    navigator.serviceWorker.register(swUrl).catch((err) => {
-      console.log('SW registration failed: ', err);
+    navigator.serviceWorker.register(swUrl).then((registration) => {
+      registration.update();
+    }).catch((err) => {
+      console.log('SW registration note:', err);
     });
   });
 }

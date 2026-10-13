@@ -1,0 +1,22 @@
+{
+  "name": "ATELIER NOIR & CO. — Curated Fashion Catalog",
+  "short_name": "ATELIER NOIR",
+  "description": "Katalog Digital Eksklusif Koleksi Busana Berkualitas Tinggi dari Pengrajin UMKM",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F7F4EE",
+  "theme_color": "#141413",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

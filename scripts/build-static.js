@@ -33,15 +33,34 @@ if (!fs.existsSync(rootDataDir)) fs.mkdirSync(rootDataDir, { recursive: true });
 fs.copyFileSync(path.resolve('public/data/catalog.json'), path.join(rootDataDir, 'catalog.json'));
 fs.copyFileSync(path.resolve('public/data/store_config.json'), path.join(rootDataDir, 'store_config.json'));
 
-// 5. Ensure ./docs/ directory exists with full build mirror
+// 5. Copy manifest.json, sw.js, and admin to root
+if (fs.existsSync(path.join(distDir, 'manifest.json'))) {
+  fs.copyFileSync(path.join(distDir, 'manifest.json'), path.resolve('manifest.json'));
+}
+if (fs.existsSync(path.join(distDir, 'sw.js'))) {
+  fs.copyFileSync(path.join(distDir, 'sw.js'), path.resolve('sw.js'));
+}
+const distAdminDir = path.join(distDir, 'admin');
+const rootAdminDir = path.resolve('admin');
+if (fs.existsSync(distAdminDir)) {
+  fs.cpSync(distAdminDir, rootAdminDir, { recursive: true });
+}
+
+// 6. Ensure ./docs/ directory exists with full build mirror
 const docsDir = path.resolve('docs');
 if (!fs.existsSync(docsDir)) fs.mkdirSync(docsDir, { recursive: true });
 fs.cpSync(distDir, docsDir, { recursive: true });
 fs.writeFileSync(path.join(docsDir, 'index.html'), htmlContent);
 
-// 6. Ensure .nojekyll in root, dist, and docs
+// 7. Ensure .nojekyll in root, dist, and docs
 fs.writeFileSync(path.resolve('.nojekyll'), '# nojekyll');
 fs.writeFileSync(path.join(distDir, '.nojekyll'), '# nojekyll');
 fs.writeFileSync(path.join(docsDir, '.nojekyll'), '# nojekyll');
 
-console.log('Static build successfully synced to root, dist, and docs!');
+// 8. Create 404.html fallback for GitHub Pages in root, dist, and docs
+fs.writeFileSync(path.resolve('404.html'), htmlContent);
+fs.writeFileSync(path.join(distDir, '404.html'), htmlContent);
+fs.writeFileSync(path.join(docsDir, '404.html'), htmlContent);
+
+console.log('Static build successfully synced to root, dist, and docs with 404 SPA fallback!');
+
