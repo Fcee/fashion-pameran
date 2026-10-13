@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
 import Fuse from 'fuse.js';
 import { translations } from '../data/translations';
+import fallbackCatalogData from '../../public/data/catalog.json';
+import fallbackStoreConfigData from '../../public/data/store_config.json';
 
 const StoreContext = createContext();
 
@@ -13,9 +15,9 @@ export const useStore = () => {
 };
 
 export const StoreProvider = ({ children }) => {
-  const [storeConfig, setStoreConfig] = useState(null);
-  const [catalog, setCatalog] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [storeConfig, setStoreConfig] = useState(fallbackStoreConfigData.store_config);
+  const [catalog, setCatalog] = useState(fallbackCatalogData.catalog);
+  const [loading, setLoading] = useState(false);
 
   // Language state (i18n)
   const [lang, setLang] = useState(() => {
@@ -53,22 +55,23 @@ export const StoreProvider = ({ children }) => {
   const [activeModal, setActiveModal] = useState(null); // 'product_detail' | 'cart' | 'size_guide' | 'loyalty'
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // Load config and catalog from JSON files (Jamstack / Decap CMS compatible)
+  // Load config and catalog from JSON files (Jamstack / Decap CMS compatible with BASE_URL)
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const baseUrl = import.meta.env.BASE_URL || '/';
         const [configRes, catalogRes] = await Promise.all([
-          fetch('/data/store_config.json'),
-          fetch('/data/catalog.json')
+          fetch(`${baseUrl}data/store_config.json`),
+          fetch(`${baseUrl}data/catalog.json`)
         ]);
-        const configData = await configRes.json();
-        const catalogData = await catalogRes.json();
-        setStoreConfig(configData.store_config);
-        setCatalog(catalogData.catalog);
+        if (configRes.ok && catalogRes.ok) {
+          const configData = await configRes.json();
+          const catalogData = await catalogRes.json();
+          if (configData?.store_config) setStoreConfig(configData.store_config);
+          if (catalogData?.catalog) setCatalog(catalogData.catalog);
+        }
       } catch (err) {
-        console.error('Failed to load store data:', err);
-      } finally {
-        setLoading(false);
+        console.warn('Using bundled catalog fallback data:', err);
       }
     };
     fetchData();

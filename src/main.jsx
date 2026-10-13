@@ -5,9 +5,10 @@ import { StoreProvider } from './context/StoreContext';
 import './index.css';
 
 // Register Service Worker for PWA (PRD 4.1)
-if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch((err) => {
+    const swUrl = `${import.meta.env.BASE_URL}sw.js`;
+    navigator.serviceWorker.register(swUrl).catch((err) => {
       console.log('SW registration failed: ', err);
     });
   });

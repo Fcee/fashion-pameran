@@ -1,10 +1,10 @@
 // Service Worker for Offline PWA Support (Master PRD 4.1)
 const CACHE_NAME = 'atelier-cache-v1';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/data/store_config.json',
-  '/data/catalog.json'
+  './',
+  './index.html',
+  './data/store_config.json',
+  './data/catalog.json'
 ];
 
 self.addEventListener('install', (event) => {
